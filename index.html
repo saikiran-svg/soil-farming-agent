@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soil Condition Tester</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>Soil Condition Tester</header>
+  <main>
+    <form id="soilForm">
+      <label for="moisture">Soil Moisture (%)</label>
+      <input type="number" id="moisture" name="moisture" min="0" max="100" step="0.1" placeholder="e.g. 30" required />
+
+      <label for="phlevel">Soil pH Level</label>
+      <input type="number" id="phlevel" name="phlevel" min="3.5" max="9" step="0.1" placeholder="e.g. 6.5" required />
+
+      <label for="texture">Soil Texture</label>
+      <select id="texture" name="texture" required>
+        <option value="" disabled selected>Select texture</option>
+        <option value="sandy">Sandy</option>
+        <option value="loamy">Loamy</option>
+        <option value="clayey">Clayey</option>
+        <option value="silty">Silty</option>
+      </select>
+
+      <button type="submit">Test Soil Condition</button>
+    </form>
+    <div class="result" id="resultArea">Enter the values above and click "Test Soil Condition" to get an assessment.
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
